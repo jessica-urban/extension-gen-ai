@@ -31,3 +31,10 @@ explore: explore_logging {}
 
 explore: explore_prompts {}
 
+explore: heatmap_example {}
+
+explore: order_handling {}
+
+explore: order_metadata {}
+
+explore: orders {}
