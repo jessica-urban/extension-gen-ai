@@ -33,7 +33,12 @@ explore: explore_prompts {}
 
 explore: heatmap_example {}
 
-explore: order_handling {}
+explore: order_handling {
+  from: order_handling
+  fields: [order_handling.business_segment,order_handling.current_order_status]
+  view_name: order_handling
+  sql_always_where: order_handling.current_order_status = "Completed" ;;
+}
 
 explore: order_metadata {}
 
