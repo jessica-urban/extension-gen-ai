@@ -32,7 +32,3 @@ explore: explore_logging {}
 explore: explore_prompts {}
 
 explore: order_handling {}
-
-explore: explore_assistant_examples {}
-
-explore: explore_assistant_refinement_examples {}
