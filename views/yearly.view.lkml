@@ -1,7 +1,7 @@
 view: yearly {
   sql_table_name: `da-coe-iot-streaming.gold_demand.yearly` ;;
 
-  dimension: average {
+  measure: average {
     type: number
     sql: ${TABLE}.average ;;
   }
@@ -9,23 +9,23 @@ view: yearly {
     type: string
     sql: ${TABLE}.countries ;;
   }
-  dimension: twenty {
+  measure: twenty {
     type: number
     sql: ${TABLE}.twenty ;;
   }
-  dimension: twenty_one {
+  measure: twenty_one {
     type: number
     sql: ${TABLE}.twenty_one ;;
   }
-  dimension: twenty_three {
+  measure: twenty_three {
     type: number
     sql: ${TABLE}.twenty_three ;;
   }
-  dimension: twenty_two {
+  measure: twenty_two {
     type: number
     sql: ${TABLE}.twenty_two ;;
   }
-  dimension: year_on_year_change {
+  measure: year_on_year_change {
     type: number
     sql: ${TABLE}.year_on_year_change ;;
   }
