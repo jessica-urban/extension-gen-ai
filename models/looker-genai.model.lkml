@@ -29,17 +29,6 @@ explore: jewellery {}
 
 explore: reserves {}
 
-explore: yearly {
-  join: jewellery {
-    type:  left_outer
-    relationship:  one_to_one
-    sql_on: ${yearly.countries} = ${jewellery.countries} ;;
-    }
-  join: reserves {
-    type:  left_outer
-    relationship:  one_to_one
-    sql_on: ${yearly.countries} = ${reserves.countries} ;;
-  }
-}
+explore: yearly {}
 
 explore: sector {}
