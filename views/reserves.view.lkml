@@ -25,7 +25,5 @@ view: reserves {
     type: number
     sql: ${TABLE}.twenty_two ;;
   }
-  measure: count {
-    type: count
-  }
+
 }

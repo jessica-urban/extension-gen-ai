@@ -29,7 +29,4 @@ view: yearly {
     type: number
     sql: ${TABLE}.year_on_year_change ;;
   }
-  measure: count {
-    type: count
-  }
 }
