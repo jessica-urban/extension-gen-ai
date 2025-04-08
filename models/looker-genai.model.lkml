@@ -30,8 +30,4 @@ explore: campaigns {
     sql_on: ${campaigns.campaign_id} = ${products.campaign_id};;
     relationship: many_to_one
     }
-}
-
-explore: customer_engagement {}
-
-explore: events {}
+  }
