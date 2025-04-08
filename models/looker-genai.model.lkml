@@ -30,8 +30,11 @@ explore: campaigns {
     sql_on: ${campaigns.campaign_id} = ${products.campaign_id};;
     relationship: many_to_one
     }
-  join: events {
+  }
+
+explore: events {
+  join: campaigns {
     sql_on: ${campaigns.campaign_id} = ${events.campaign_id};;
     relationship: many_to_one
   }
-  }
+}
