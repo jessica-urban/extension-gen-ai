@@ -56,13 +56,13 @@ view: events {
   measure: sum_revenue {
     type: sum
     sql: ${TABLE}.order_revenue ;;
-    drill_fields: [campaigns.campaign_name, campaigns.campaign_id]
+    drill_fields: [campaigns.campaign_name]
   }
 
   measure: sum_cost {
     type: sum
     sql: campaigns.budget;;
-    drill_fields: [campaigns.campaign_name, campaigns.campaign_id]
+    drill_fields: [campaigns.campaign_name]
   }
 
   measure: roi {
