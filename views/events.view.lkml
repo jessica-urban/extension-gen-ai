@@ -55,6 +55,6 @@ view: events {
 
   measure: gross_revenue {
     type: sum
-    drill_fields: [events.order_revenue, events.campaign_id]
+    drill_fields: [events.order_revenue,campaigns.campaign_name, campaigns.campaign_id]
   }
 }
