@@ -53,7 +53,7 @@ view: events {
     sql: ${TABLE}.visitor_id ;;
   }
 
-  measure: gross_revenue {
+  measure: roi {
     type: sum
     drill_fields: [events.order_revenue,campaigns.campaign_name, campaigns.campaign_id]
   }
