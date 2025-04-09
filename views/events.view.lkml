@@ -52,8 +52,9 @@ view: events {
     type: string
     sql: ${TABLE}.visitor_id ;;
   }
-  measure: count {
-    type: count
-    drill_fields: [campaigns.campaign_name, campaigns.campaign_id]
+
+  measure: gross_revenue {
+    type: sum
+    drill_fields: [events.order_revenue, events.campaign_id]
   }
 }
