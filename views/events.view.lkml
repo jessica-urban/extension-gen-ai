@@ -59,15 +59,15 @@ view: events {
     drill_fields: [campaigns.campaign_name]
   }
 
-  measure: sum_cost {
-    type: sum
+  measure: max_cost {
+    type: max
     sql: campaigns.budget;;
     drill_fields: [campaigns.campaign_name]
   }
 
   measure: roi {
     type: percent_of_total
-    sql: ${sum_revenue}/${sum_cost} ;;
+    sql: ${sum_revenue}/${max_cost} ;;
     drill_fields: [campaigns.campaign_name]
   }
 }
