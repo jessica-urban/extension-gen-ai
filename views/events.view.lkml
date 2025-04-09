@@ -59,9 +59,15 @@ view: events {
     drill_fields: [campaigns.campaign_name, campaigns.campaign_id]
   }
 
+  measure: sum_cost {
+    type: sum
+    sql: campaigns.budget;;
+    drill_fields: [campaigns.campaign_name, campaigns.campaign_id]
+  }
+
   measure: roi {
     type: percent_of_total
-    sql: ${sum_revenue}/campaigns.budget ;;
+    sql: ${sum_revenue}/${sum_cost} ;;
     drill_fields: [campaigns.campaign_name, campaigns.campaign_id]
   }
 }
