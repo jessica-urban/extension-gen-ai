@@ -68,6 +68,6 @@ view: events {
   measure: roi {
     type: percent_of_total
     sql: ${sum_revenue}/${sum_cost} ;;
-    drill_fields: [campaigns.campaign_name, campaigns.campaign_id]
+    drill_fields: [campaigns.campaign_name]
   }
 }
