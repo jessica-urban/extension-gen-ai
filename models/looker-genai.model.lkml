@@ -27,8 +27,8 @@ persist_with: looker_genai_default_datagroup
 
 explore: campaigns {
   join: events {
-    sql_on: ${campaigns.campaign_id} = ${events.campaign_id};;
-    relationship: many_to_one
+    sql_on: ${events.campaign_id} = ${campaigns.campaign_id};;
+    relationship: one_to_many
   }
 }
 
@@ -36,8 +36,8 @@ explore: events {}
 
 explore: customer_engagement {
   join: campaigns {
-    sql_on: ${campaigns.campaign_id} = ${customer_engagement.campaign_id};;
-    relationship: many_to_one
+    sql_on: ${customer_engagement.campaign_id} = ${campaigns.campaign_id};;
+    relationship: one_to_many
   }
 }
 
