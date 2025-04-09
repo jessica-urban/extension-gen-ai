@@ -41,7 +41,7 @@ explore: events {
 
 explore: customer_engagement {
   join: campaigns {
-    sql_on: ${campaigns.campaign_id} = ${customer_engagement.campaign_id}.campaign_id};;
+    sql_on: ${campaigns.campaign_id} = ${customer_engagement.campaign_id};;
     relationship: many_to_one
   }
 }
