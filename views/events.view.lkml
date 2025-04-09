@@ -55,6 +55,7 @@ view: events {
 
   measure: sum_revenue {
     type: sum
-    drill_fields: [events.order_revenue,campaigns.campaign_name, campaigns.campaign_id]
+    sql: ${TABLE}.order_revenue ;;
+    drill_fields: [campaigns.campaign_name, campaigns.campaign_id]
   }
 }
