@@ -58,4 +58,10 @@ view: events {
     sql: ${TABLE}.order_revenue ;;
     drill_fields: [campaigns.campaign_name, campaigns.campaign_id]
   }
+
+  measure: roi {
+    type: percent_of_total
+    sql: ${sum_revenue}/campaigns.budget ;;
+    drill_fields: [campaigns.campaign_name, campaigns.campaign_id]
+  }
 }
