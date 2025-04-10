@@ -25,14 +25,19 @@ persist_with: looker_genai_default_datagroup
 # Typically, join parameters require that you define the join type, join relationship, and a sql_on clause.
 # Each joined view also needs to define a primary key.
 
-explore: campaigns {
-  join: events {
+explore: events {
+  join: campaigns {
     sql_on: ${events.campaign_id} = ${campaigns.campaign_id};;
     relationship: one_to_many
   }
 }
-
-explore: events {}
+explore: campaigns {
+  label: "Agent Walmart"
+  join: products {
+    sql_on: ${campaigns.campaign_id} = ${products.campaign_id};;
+    relationship: many_to_one
+  }
+}
 
 explore: customer_engagement {
   join: campaigns {
