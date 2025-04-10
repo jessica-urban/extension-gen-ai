@@ -26,24 +26,12 @@ persist_with: looker_genai_default_datagroup
 # Each joined view also needs to define a primary key.
 
 explore: events {
-  join: campaigns {
-    sql_on: ${events.campaign_id} = ${campaigns.campaign_id};;
-    relationship: one_to_many
-  }
-}
-explore: campaigns {
-  label: "Agent Walmart"
-  join: products {
-    sql_on: ${campaigns.campaign_id} = ${products.campaign_id};;
-    relationship: many_to_one
-  }
-}
+  label: "Events Explore"
 
-explore: customer_engagement {
   join: campaigns {
-    sql_on: ${customer_engagement.campaign_id} = ${campaigns.campaign_id};;
+    type: left_outer
     relationship: one_to_many
+    sql_on: ${events.campaign_id} = ${campaigns.campaign_id} ;;
   }
-}
 
-explore: products {}
+}
